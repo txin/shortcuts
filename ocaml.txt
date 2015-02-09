@@ -1,0 +1,32 @@
+* Comments *
+--------------------------------------------------------------------------------
+(* hello *)
+(*
+ * hello 
+ * )
+
+
+* Calling functions *
+--------------------------------------------------------------------------------
+repeated "hello" 3
+
+repeated (prompt_string "Name please: ") 3
+
+NOTE: brackets around the whole function call, not arguments
+
+
+* Defining a function *
+--------------------------------------------------------------------------------
+let average a b =
+    (a +. b) /. 2.0
+
+NOTE: + defines as integer addition, +. for float. the last expression
+      in a function becomes the result of the function automatically.
+
+
+* Basic types *
+--------------------------------------------------------------------------------
+float: double-precision floating point
+string: a string
+
+NOTE: float i +. f

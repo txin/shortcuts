@@ -1,4 +1,4 @@
-* Comments *
+B* Comments *
 --------------------------------------------------------------------------------
 (* hello *)
 (*
@@ -200,3 +200,45 @@ val x : int ref = {contents = 0}
 - : unit = ()
 # x;;
 - : int ref = {contents = 1}
+
+
+* Extras *
+--------------------------------------------------------------------------------
+Float.of_int: refer to the function in int objects
+
+
+* Operators *
+--------------------------------------------------------------------------------
+**  raising a floating-point number to a power.
+|>  more like pipe in bash, which is left-associative
+^>  similar as above, but is right-associative
+!   dereference (pointer)
+^   string concatenation
+ref reference(pointer)
+
+
+* Keywords *
+--------------------------------------------------------------------------------
+rec
+
+# let rec sum l =
+  match l with
+  | [] -> 0
+  | hd :: tl -> hd + sum tl
+ ;;
+
+ val sum : int list -> int = <fun>
+
+* Curried Function *
+--------------------------------------------------------------------------------
+This style of function is called a curried function. (Currying is
+named after Haskell Curry, a logician who had a significant impact on
+the design and theory of programming languages.) The key to
+interpreting the type signature of a curried function is the
+observation that -> is right-associative. 
+
+* Prefix and Infix Operators *
+--------------------------------------------------------------------------------
+Int.max 3 4
+
+(+) 3 4

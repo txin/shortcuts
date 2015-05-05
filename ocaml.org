@@ -1,22 +1,15 @@
-B* Comments *
---------------------------------------------------------------------------------
+* Comments 
 (* hello *)
 (*
  * hello 
  * )
 
-
-* Calling functions *
---------------------------------------------------------------------------------
+* Calling functions
 repeated "hello" 3
-
 repeated (prompt_string "Name please: ") 3
-
 NOTE: brackets around the whole function call, not arguments
 
-
-* Defining a function *
---------------------------------------------------------------------------------
+* Defining a function
 let average a b =
     (a +. b) /. 2.0
 
@@ -27,28 +20,22 @@ Let bindings defining a var
 We can also create a variable to name the value of a given expression,
 using the let keyword. 
 
-* Basic types *
---------------------------------------------------------------------------------
+* Basic types
 float: double-precision floating point
 string: a string
 
 NOTE: float i +. f
 
-* Extras *
---------------------------------------------------------------------------------
+* Extras
 module: every piece of code is wrapped into a module
 open: open modules to include functions
 type: abstract type
 Int.Set module
 
-
-* Abstract types *
---------------------------------------------------------------------------------
+* Abstract types 
 type pair_of_ints = { a : int; b : int; }
 
-
-* Functors * 
---------------------------------------------------------------------------------
+* Functors 
 A functor is a module that is parametrized by another module, just
 like a function is a value which is parametrized by other values, the
 arguments.
@@ -60,9 +47,7 @@ Set module
                                let compare = compare
                              end);;
 
-
-* Data Types and Matching *
---------------------------------------------------------------------------------
+* Data Types and Matching
 # type foo =
     | Nothing
     | Int of int
@@ -71,9 +56,7 @@ Set module
 
 type foo = Nothing | Int of int | Pair of int * int | String of string
 
-
-* Loops *
---------------------------------------------------------------------------------
+* Loops
 # let permute array =
     let length = Array.length array in
     for i = 0 to length - 2 do
@@ -89,9 +72,7 @@ val permute : 'a array -> unit = <fun>
 
 do ... done
 
-
-* Notes *
---------------------------------------------------------------------------------
+* Notes
 semi-colons are not required in a ocaml file.
 
 annotations:
@@ -101,9 +82,7 @@ annotations:
   ;;
 val sum_if_true : (int -> bool) -> int -> int -> int = <fun>
 
-
-* Data Structure * 
---------------------------------------------------------------------------------
+* Data Structure 
 Tuple
         let a_tuple = (3, "Three")
 List
@@ -112,9 +91,7 @@ List
 
 List.map ~f:String.length languages
 
-
-* Match *
---------------------------------------------------------------------------------
+* Match
 A match statement is a kind of juiced-up version of the switch
 statement found in C and Java.
 
@@ -138,13 +115,11 @@ val sum : int list -> int = <fun>
 # sum [1;2;3];;
 - : int = 6
 
-
 NOTE
 :: append
 
-
 Imperative Programming
---------------------------------------------------------------------------------
+
 pure or functional: the code in doesn't modify variables or values as
 part of its execution.
 
@@ -156,9 +131,7 @@ OCaml also has excellent support for imperative programming, including
 mutable data structures like arrays and hash tables, and control-flow
 constructs like for and while loops.
 
-
-* Arrays *
---------------------------------------------------------------------------------
+* Arrays
 # let numbers = [| 1; 2; 3; 4 |];;
 val numbers : int array = [|1; 2; 3; 4|]
 # numbers.(2) <- 4;;
@@ -172,9 +145,7 @@ val numbers : int array = [|1; 2; 3; 4|]
 unit  = () kind of like void in C or Java, a place holder, represents
 some side effect
 
-
-* Mutable Record Fields *
---------------------------------------------------------------------------------
+* Mutable Record Fields
 # type running_sum =
    { mutable sum: float;
      mutable sum_sq: float; (* sum of squares *)
@@ -187,9 +158,7 @@ type running_sum = {
   mutable samples : int;
 }
 
-
-* Refs *
---------------------------------------------------------------------------------
+* Refs
 The ref type comes predefined in the standard library, but there's nothing really
 special about it. It's just a record type with a single mutable field
 called contents:
@@ -201,14 +170,10 @@ val x : int ref = {contents = 0}
 # x;;
 - : int ref = {contents = 1}
 
-
-* Extras *
---------------------------------------------------------------------------------
+* Extras
 Float.of_int: refer to the function in int objects
 
-
-* Operators *
---------------------------------------------------------------------------------
+* Operators
 **  raising a floating-point number to a power.
 |>  more like pipe in bash, which is left-associative
 ^>  similar as above, but is right-associative
@@ -216,9 +181,7 @@ Float.of_int: refer to the function in int objects
 ^   string concatenation
 ref reference(pointer)
 
-
-* Keywords *
---------------------------------------------------------------------------------
+* Keywords
 rec
 
 # let rec sum l =
@@ -229,16 +192,15 @@ rec
 
  val sum : int list -> int = <fun>
 
-* Curried Function *
---------------------------------------------------------------------------------
+* Curried Function
 This style of function is called a curried function. (Currying is
 named after Haskell Curry, a logician who had a significant impact on
 the design and theory of programming languages.) The key to
 interpreting the type signature of a curried function is the
 observation that -> is right-associative. 
 
-* Prefix and Infix Operators *
---------------------------------------------------------------------------------
+* Prefix and Infix Operators
 Int.max 3 4
-
 (+) 3 4
+* Maps and Hash Tables
+** Maps

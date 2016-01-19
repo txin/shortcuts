@@ -1,30 +1,35 @@
 * General
-M-<             top of the file
-M->             bottom of the file
-C-v             page down
-M-v             page up
+| M-< | top of the file    |
+| M-> | bottom of the file |
+| C-v | page down          |
+| M-v | page up            |
 
 * Org-mode
 ** General
-M-S-RET         insert more TODOs
-C-c C-d         deadline 
-C-c C-s         scheduled 
-C-c .           create a timestamp
-S-TAB           collapse cycle
-TAB             fold
-
+| M-S-RET | insert more TODOs     |
+| C-c C-d | deadline              |
+| C-c C-s | scheduled             |
+| C-c .   | create a timestamp    |
+| S-TAB   | collapse cycle        |
+| TAB     | fold                  |
+| C-x n s | org-narrow-to-subtree |
+| C-x n w | widen                 |
+| C-c *   | org-toggle-heading    |
 ** Check Boxes
-C-c C-c         Toggle checkbox status
-M-S-RET         Insert a new item with a checkbox. 
+| C-c C-c | Toggle checkbox status             |
+| M-S-RET | Insert a new item with a checkbox. |
 
-C-c ,           Set the priority 
-S-up S-down     Increase/decrease priority of current headline
+| C-c ,       | Set the priority                               |
+| S-up S-down | Increase/decrease priority of current headline |
 
 ** Table
 C-c |           Convert the active region to table. 
 C-c -           Insert a horizontal line below current row. 
 
 ** Clock
-C-c C-x C-i     org-clock-in
-C-c C-x C-o     org-clock-out
-C-c C-x C-e     org-clock-modify-effort-estimate
+| C-c C-x C-i | org-clock-in                     |
+| C-c C-x C-o | org-clock-out                    |
+| C-c C-x C-e | org-clock-modify-effort-estimate |
+
+
+
